@@ -56,10 +56,14 @@ window.addEventListener('load', () => {
 // Unable to get this particular event to work properly. 
 const pTags2 = document.querySelector('p');
 
-function yellowBackground(e) {
-    e.target.style.background = 'yellow';
-}
-pTags2.addEventListener('focus', yellowBackground)
+// function focusEvent() {
+//     alert('You have clicked on the first paragraph!')
+// }
+document.addEventListener('focus', (e) => {
+    if (e === pTags[e]){
+        console.log('You have clicked on the first paragraph!')
+    };
+});
 // pTags2.addEventListener('focus', yellowBackground)
 
 // * `resize`
