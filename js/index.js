@@ -28,6 +28,23 @@ document.addEventListener('keydown', downKey);
 
 // * `wheel`
 
+const wheelPTags = document.querySelectorAll('p');
+console.log(wheelPTags);
+//resizing all p tags did not work with the code I currently have; only able to resize the first p tag that the selector finds
+
+function wheelResize(e) {
+    e.preventDefault();
+  
+    scale += e.deltaY * -0.01;
+  
+    scale = Math.min(Math.max(.125, scale), 4);
+  
+    wheelPTransform.style.transform = `scale(${scale})`;
+  }
+  
+  let scale = 3;
+  const wheelPTransform = document.querySelector('p');
+  wheelPTransform.onwheel = wheelResize;
 
 // * `load`
 
