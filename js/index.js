@@ -78,8 +78,19 @@ document.addEventListener('scroll', e => {
 });
 
 // * `select`
+const inputBox = document.createElement('input');
+inputBox.value = 'Sample Text Here';
+inputBox.className = 'input-class';
+document.querySelector('header.intro p').prepend(inputBox);
 
+const inputArea = document.querySelector('.input-class');
 
+function logSelectedText(e) {
+    const selection = e.target.value.substring(e.target.selectionStart, e.target.selectionEnd);
+    console.log(`Selected text is ${selection}`);
+};
+
+inputArea.addEventListener('select', logSelectedText);
 
 // * `dblclick`
 document.addEventListener('dblclick', (e) => {
