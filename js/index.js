@@ -1,7 +1,7 @@
 // Your code goes here
 // * `mouseover`
-const imgTags = Array.from(document.querySelectorAll('img'));
-console.log(imgTags)
+// const imgTags = Array.from(document.querySelectorAll('img'));
+// console.log(imgTags);
 
 document.addEventListener('mouseover', (e) => {
     e.target.style.border = '2.5px solid green';
@@ -53,7 +53,14 @@ window.addEventListener('load', () => {
   });
 
 // * `focus`
+// Unable to get this particular event to work properly. 
+const pTags2 = document.querySelector('p');
 
+function yellowBackground(e) {
+    e.target.style.background = 'yellow';
+}
+pTags2.addEventListener('focus', yellowBackground)
+// pTags2.addEventListener('focus', yellowBackground)
 
 // * `resize`
 window.addEventListener('resize', () => {
@@ -61,7 +68,9 @@ window.addEventListener('resize', () => {
 });
 
 // * `scroll`
+
 // * `select`
+
 // * `dblclick`
 document.addEventListener('dblclick', (e) => {
     alert('Save your clicks! Double-clicks are not needed on the \'Net! :)');
