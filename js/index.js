@@ -48,6 +48,9 @@ function wheelResize(e) {
 
 // * `load`
 
+window.addEventListener('load', () => {
+    console.log('The Fun Bus Agency Site is locked and loaded!');
+  });
 
 // * `focus`
 
