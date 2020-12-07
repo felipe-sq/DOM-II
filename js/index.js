@@ -98,3 +98,14 @@ document.addEventListener('dblclick', (e) => {
 });
 
 // * `drag / drop`
+
+
+
+// * `preventDefault()`
+Array.from(document.links).forEach((link) => {
+    link.addEventListener('click', (e) => {
+      console.log('Successfully prevented a page reload!');
+      e.preventDefault();
+
+    });
+  });
