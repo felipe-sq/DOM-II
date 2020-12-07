@@ -69,7 +69,13 @@ window.addEventListener('resize', () => {
 
 // * `scroll`
 
+document.addEventListener('scroll', e => {
+    console.log('You have scrolled on the page!');
+});
+
 // * `select`
+
+
 
 // * `dblclick`
 document.addEventListener('dblclick', (e) => {
