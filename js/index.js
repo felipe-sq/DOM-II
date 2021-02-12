@@ -95,6 +95,33 @@ document.addEventListener('dblclick', (e) => {
 // * `drag / drop`
 // This code still requires some work
 // to be continued ... 
+const containerDiv = document.querySelector('div.home')
+const dropDiv = document.createElement('div');
+containerDiv.appendChild(dropDiv)
+
+dropDiv.classList.add('dropzone')
+const dropzone1 = document.createElement('div');
+dropzone1.setAttribute('id', 'draggable')
+dropzone1.setAttribute('draggable', 'true')
+dropzone1.style.border = '10px solid green';
+dropzone1.style.background = 'lime'
+dropzone1.textContent = "This is the draggable content!"
+
+const dropzone2 = document.createElement('div');
+dropzone2.setAttribute('id', 'draggable')
+dropzone2.setAttribute('draggable', 'true')
+dropzone2.style.border = '10px solid red';
+dropzone2.style.background = 'pink';
+
+dropDiv.appendChild(dropzone1)
+dropDiv.appendChild(dropzone2)
+
+dropzone1
+
+
+
+
+
 
 
 // * `preventDefault()`
